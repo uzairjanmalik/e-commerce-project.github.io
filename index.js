@@ -22,6 +22,12 @@ const product = [
         image: 'images/xx-4.jpeg',
         title: '250D DSLR Camera',
         price: 100,
+    },
+    {
+        id:4,
+        image:'images/cc-5.jpg',
+        title:'luxury watch',
+        price:300,
     }
 ];
 const categories = [...new Set(product.map((item) => { return item }))]
