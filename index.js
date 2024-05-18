@@ -28,6 +28,24 @@ const product = [
         image:'images/cc-5.jpg',
         title:'luxury watch',
         price:300,
+    },
+    {
+        id:5,
+        image:'images/w-1.jpg',
+        title:'modern style',
+        price:200,
+    },
+    {
+        id:6,
+        image:'images/w-3.jpg',
+        title:'rolex',
+        price:700,
+    },
+    {
+        id:7,
+        image:'images/w-4.jpg',
+        title:'Rado',
+        price:360,
     }
 ];
 const categories = [...new Set(product.map((item) => { return item }))]
