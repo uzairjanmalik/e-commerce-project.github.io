@@ -104,14 +104,28 @@ function displaycart() {
 }
 
 // slider
-document.querySelectorAll('.pir').forEach(item => {
-    item.addEventListener('mouseover', () => {
-        document.querySelector('.slide-container3').style.animationPlayState = 'paused';
-    });
-    item.addEventListener('mouseout', () => {
-        document.querySelector('.slide-container3').style.animationPlayState = 'running';
+document.addEventListener('DOMContentLoaded', () => {
+    const slideContainer = document.querySelector('.slide-container3');
+    const pirElements = document.querySelectorAll('.pir');
+
+    let animationTimeout;
+
+    pirElements.forEach(pirElement => {
+        pirElement.addEventListener('mouseenter', () => {
+            slideContainer.style.animationPlayState = 'paused';
+            if (animationTimeout) {
+                clearTimeout(animationTimeout);
+            }
+        });
+
+        pirElement.addEventListener('mouseleave', () => {
+            animationTimeout = setTimeout(() => {
+                slideContainer.style.animationPlayState = 'running';
+            }, 2000);
+        });
     });
 });
+
 
 
 
