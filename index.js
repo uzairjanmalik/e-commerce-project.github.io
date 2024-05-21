@@ -103,5 +103,16 @@ function displaycart() {
     }
 }
 
+// slider
+document.querySelectorAll('.pir').forEach(item => {
+    item.addEventListener('mouseover', () => {
+        document.querySelector('.slide-container3').style.animationPlayState = 'paused';
+    });
+    item.addEventListener('mouseout', () => {
+        document.querySelector('.slide-container3').style.animationPlayState = 'running';
+    });
+});
+
+
 
 

@@ -353,3 +353,74 @@ footer{
         margin: 4px;
     }
 }
+
+/* slider */
+
+@import url('https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Permanent+Marker&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap');
+
+
+body{
+    /* background-color: white; */
+    /* min-height: 50vh; */
+    display: grid;
+    place-items: center;
+    /* background: linear-gradient(90deg, #181818 0%, #080808 100%); */
+}
+.container2{
+    border: 2px solid rgb(88, 50, 6);
+    height: 250px;
+    margin: auto;
+    border-radius: 50px; 
+    position: relative;
+    width: 95%;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+.slide-container3{
+    display: flex;
+    width: calc(250px * 18);
+    /* border-radius: 50px; */
+    animation: scroll 30s linear infinite;
+}
+
+@keyframes scroll {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(calc(-250px * 9));
+    }
+}
+.slide-image{
+    height: 190px;
+    width: 250px;
+    display: flex;
+    object-fit: contain;
+    object-position: center;
+    align-items: center;
+    /* padding: 15px; */
+    perspective: 100px;
+    /* border-radius: 50px; */
+}
+.pir{
+    margin: 0px 6%;
+    width: 100%;
+    /* box-shadow: 3px 2px 2px  rgb(8, 8, 8); */
+    transition: transform 1s;
+    /* border-radius: 50px; */
+}
+.pir:hover{
+    transform: scale(1.1) ;
+}
+h1{
+    color: rgb(50, 32, 1);
+    font-size: 50px;
+    /* font-family: 'Climate Crisis', sans-serif; */
+    font-family: "Moon Dance", cursive;
+    font-weight: 900;
+    font-style: normal;
+    text-shadow: 3px 3px 3px rgb(56, 37, 2);
+}
