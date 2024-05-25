@@ -1,5 +1,44 @@
 @import url('https://fonts.googleapis.com/css2?family=Moon+Dance&display=swap');
+.formcontainer {
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
 * {
     margin: 0;
     padding: 0;
@@ -49,20 +88,21 @@ body {
     background-size: cover;
     object-fit: contain;
     object-position: center;
-    filter:contrast(39px);
-    filter:saturate(-7);
-    position: relative; /* Add this line to make z-index work */
+    filter: contrast(39px);
+    filter: saturate(-7);
+    position: relative;
 }
 
 
 h6 {
-    z-index: 3; /* Set a higher z-index value */
+    z-index: 3;
     color: rgb(247, 247, 247);
     font-size: 60px;
     text-shadow: 4px 8px 9px rgb(5, 5, 5);
     font-family: "Moon Dance", cursive;
     font-weight: 900;
     font-style: normal;
+    text-align: center;
 }
 
 
@@ -78,8 +118,6 @@ h6 {
 
 .fa-solid {
     color: rgb(63, 42, 1);
-    /* cursor: pointer; */
-    /* font-size: 25px; */
 }
 
 .cart p {
@@ -101,38 +139,41 @@ h6 {
 }
 
 #root {
-    width: 65%;
+    width: 100vw;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 2px;
-}
-
-.fa-xmark {
-    /* color: rgb(255, 2, 2);
-    float: right;
-    position: relative;
-    left: 80%;
-    cursor: pointer;
-    font-size: 25px; */
-}
-
+}   
 .sidebar {
-    position: relative;
-    top: 0;
-    right: 0;
-    width: 480px;
+    position: fixed;
+    top: 80px;
+    right: 10px;
+    width: 200px;
+    /* height: 200px; */
+    border: 2px solid rgb(245, 164, 3);
     border-radius: 5px;
-    background-color: #c4c0c0;
-    margin-left: 20px;
+    background-color: rgb(146, 144, 144);
     padding: 15px;
     text-align: center;
-    margin-top: 60px;
-    /* transition: 1s; */
-    /* display: none; */
+    overflow: hidden; /* Add overflow to enable scrolling */
+    scroll-behavior: smooth; /* Add smooth scrolling */
+    z-index: 888;
+    transition: right 0.3s ease;
+}
+.sidebar.active {
+    right: 0; /* Move sidebar to the screen */
+  }
+
+.sidebar.stopped {
+    animation-name: none; /* Stop animation */
 }
 
+/* .empty{
+    color: red;
+    font-size: 30px;
+} */
 .head {
-    background-color: rgb(63, 42, 1);
+    background-color: rgb(175, 118, 3);
     border-radius: 3px;
     height: 40px;
     padding: 10px;
@@ -159,6 +200,7 @@ h6 {
     border-radius: 5px;
     padding: 15px;
     margin-top: 60px;
+    /* background-color: white; */
 }
 
 .img-box {
@@ -212,7 +254,7 @@ button:hover {
     align-items: center;
     justify-content: space-between;
     padding: 10px;
-    background-color: rgb(248, 244, 244);
+    background-color: white;
     border-bottom: 1px solid #333;
     border-radius: 3px;
     margin: 10px 10px;
@@ -241,50 +283,59 @@ button:hover {
 
 /* footer */
 
-footer{
+footer {
     background-color: #241601f5;
     margin-top: 3%;
 }
-.footerContainer{
+
+.footerContainer {
     width: 100vw;
     /* margin-top: 15px; */
-    padding: 70px 30px 20px ;
+    padding: 70px 30px 20px;
 }
-.socialIcons{
+
+.socialIcons {
     display: flex;
     justify-content: center;
 }
-.socialIcons a{
+
+.socialIcons a {
     text-decoration: none;
-    padding:  10px;
+    padding: 10px;
     background-color: rgb(19, 13, 0);
     margin: 10px;
     border-radius: 50%;
 }
-.socialIcons a i{
+
+.socialIcons a i {
     font-size: 2em;
     color: rgb(227, 153, 5);
-    opacity: 0,9;
+    opacity: 0, 9;
 }
+
 /* Hover affect on social media icon */
-.socialIcons a:hover{
+.socialIcons a:hover {
     background-color: rgb(32, 23, 1);
     transition: 0.5s;
 }
-.socialIcons a:hover i{
+
+.socialIcons a:hover i {
     color: rgb(63, 42, 1);
     transition: 0.5s;
 }
-.footerNav{
+
+.footerNav {
     margin: 30px 0;
 }
-.footerNav ul{
+
+.footerNav ul {
     display: flex;
     justify-content: center;
     list-style-type: none;
 }
-.footerNav ul li a{
-    color:rgb(209, 158, 2);
+
+.footerNav ul li a {
+    color: rgb(209, 158, 2);
     margin: 20px;
     text-decoration: none;
     font-size: 1.7em;
@@ -294,18 +345,22 @@ footer{
     font-weight: 900;
     font-style: normal;
 }
-.footerNav ul li a:hover{
+
+.footerNav ul li a:hover {
     opacity: 1;
 }
-.footerBottom{
+
+.footerBottom {
     background-color: #241601;
     padding: 20px;
     text-align: center;
 }
-.footerBottom p{
+
+.footerBottom p {
     color: rgb(250, 162, 9);
 }
-.designer{
+
+.designer {
     opacity: 0.7;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -318,40 +373,52 @@ footer{
 
 
 @media (max-width:700px) {
-    h6{
-        font-size: 16px;
+    h1{
+        text-align: center;
     }
-    .picture{
+    h6 {
+        font-size: 30px;
+    }
+
+    .picture {
         background-size: cover;
     }
+
     #root {
         grid-template-columns: repeat(1, 1fr);
         width: 100vw;
     }
 
     .sidebar {
-        position: absolute;
-        top: 694%;
-        width: 100%;
-        height: 115vh;
-        z-index: 5;
+        width: 90%;
+
     }
+
     /* footer */
-    .footer{
+    .footer {
         margin-top: 95%;
     }
-    .footerNav ul{
+
+    .footerNav ul {
         flex-direction: column;
-    } 
-    .footerNav ul li{
-        width:100%;
+    }
+
+    .footerNav ul li {
+        width: 100%;
         text-align: center;
         margin: 10px;
     }
-    .socialIcons a{
+
+    .socialIcons a {
         padding: 8px;
         margin: 4px;
     }
+}
+@media (min-width:701px) {
+    .sidebar{
+        width: 35%
+    }
+    
 }
 
 /* slider */
@@ -361,25 +428,27 @@ footer{
 @import url('https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap');
 
 
-body{
+body {
     /* background-color: white; */
     /* min-height: 50vh; */
     display: grid;
     place-items: center;
     /* background: linear-gradient(90deg, #181818 0%, #080808 100%); */
 }
-.container2{
+
+.container2 {
     border: 2px solid rgb(88, 50, 6);
     height: 250px;
     margin: auto;
-    border-radius: 50px; 
+    border-radius: 10px;
     position: relative;
     width: 95%;
     display: grid;
     place-items: center;
     overflow: hidden;
 }
-.slide-container3{
+
+.slide-container3 {
     display: flex;
     width: calc(250px * 18);
     /* border-radius: 50px; */
@@ -387,14 +456,16 @@ body{
 }
 
 @keyframes scroll {
-    0%{
+    0% {
         transform: translateX(0);
     }
-    100%{
+
+    100% {
         transform: translateX(calc(-250px * 9));
     }
 }
-.slide-image{
+
+.slide-image {
     height: 190px;
     width: 250px;
     display: flex;
@@ -405,17 +476,20 @@ body{
     perspective: 100px;
     /* border-radius: 50px; */
 }
-.pir{
+
+.pir {
     margin: 0px 6%;
     width: 100%;
     /* box-shadow: 3px 2px 2px  rgb(8, 8, 8); */
     transition: transform 1s;
     /* border-radius: 50px; */
 }
-.pir:hover{
-    transform: scale(1.1) ;
+
+.pir:hover {
+    transform: scale(1.1);
 }
-h1{
+
+h1 {
     color: rgb(50, 32, 1);
     font-size: 50px;
     /* font-family: 'Climate Crisis', sans-serif; */
@@ -423,4 +497,24 @@ h1{
     font-weight: 900;
     font-style: normal;
     text-shadow: 3px 3px 3px rgb(56, 37, 2);
+}
+
+/* move sidebar */
+@keyframes moveSidebar {
+    0% {
+        top: 0;
+        right: 0;
+    }
+    25% {
+        top: calc(100vh - 200px);
+    }
+    50% {
+        right: calc(100vw - 200px);
+    }
+    75% {
+        top: 0;
+    }
+    100% {
+        right: 0;
+    }
 }

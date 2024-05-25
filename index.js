@@ -126,7 +126,96 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+// sidebar
+function moveSidebar() {
+    var sidebar = document.getElementById("sidebar");
+    var screenWidth = window.innerWidth;
+    var sidebarWidth = sidebar.offsetWidth;
+    var newPosition = Math.floor(Math.random() * (screenWidth - sidebarWidth));
+  
+    sidebar.style.right = newPosition + "px";
+  }
+  
+  // Function to check screen width and move the sidebar if necessary
+  function checkWidthAndMoveSidebar() {
+    var screenWidth = window.innerWidth;
+    var sidebar = document.getElementById("sidebar");
+  
+    if (screenWidth < 300) {
+      moveSidebar();
+    } else {
+      sidebar.style.right = "0px"; // Reset position if screen is wider than 300px
+    }
+  }
+  
+  // Call the function initially and on window resize
+  window.onload = checkWidthAndMoveSidebar;
+  window.onresize = checkWidthAndMoveSidebar;
+  
+  // Periodically move the sidebar randomly
+  setInterval(moveSidebar, 3000);
+  
+
+// forms
 
 
 
-
+document.addEventListener("DOMContentLoaded", function() {
+    const signInForm = document.getElementById("signInForm");
+    const signOutBtn = document.getElementById("signOutBtn");
+  
+    signInForm.addEventListener("submit", function(event) {
+      event.preventDefault();
+      const username = signInForm.username.value;
+      const password = signInForm.password.value;
+  
+      // Perform authentication (for simplicity, using hardcoded credentials)
+      if (username === "user" && password === "password") {
+        // Successful sign-in
+        alert("Sign in successful!");
+        signIn();
+      } else {
+        // Failed sign-in
+        alert("Incorrect username or password. Please try again.");
+      }
+    });
+  
+    signOutBtn.addEventListener("click", function() {
+      signOut();
+    });
+  
+    // Function to show sign-out button and hide sign-in form
+    function signIn() {
+      signInForm.style.display = "none";
+      signOutBtn.style.display = "block";
+    }
+  
+    // Function to show sign-in form and hide sign-out button
+    function signOut() {
+      signInForm.style.display = "block";
+      signOutBtn.style.display = "none";
+    }
+  });
+  
+  document.addEventListener("DOMContentLoaded", function() {
+    const sidebar = document.getElementById("sidebar");
+    
+    // Check screen width on page load
+    checkScreenWidth();
+  
+    // Check screen width when window is resized
+    window.addEventListener("resize", checkScreenWidth);
+  
+    function checkScreenWidth() {
+      const screenWidth = window.innerWidth;
+      
+      // If screen width is less than or equal to 300px, activate sidebar
+      if (screenWidth <= 300) {
+        sidebar.classList.add("active");
+      } else {
+        // If screen width is greater than 300px, deactivate sidebar
+        sidebar.classList.remove("active");
+      }
+    }
+  });
+  
