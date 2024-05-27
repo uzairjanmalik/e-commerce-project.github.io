@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    
     <div class="header">
         <p class="logo">Style It!</p>
         <div class="cart"><i class="fa-solid fa-cart-shopping"></i>
@@ -36,8 +37,8 @@
     </div>
 
 
-<!-- slider -->
-<h1>MORE FROM STYLE!</h1>
+    <!-- slider -->
+    <h1>MORE FROM STYLE!</h1>
     <div class="container2">
         <div class="slide-container3">
             <div class="slide-image">
@@ -59,22 +60,45 @@
             </div>
         </div>
     </div>
-    <div class="formcontainer">
-        <form id="signInForm" class="form">
-          <h5>Sign In</h5>
-          <div class="form-group">
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required>
-          </div>
-          <div class="form-group">
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
-          </div>
-          <button type="submit">Sign In</button>
-        </form>
-        <button id="signOutBtn" style="display: none;">Sign Out</button>
-      </div>
-      
+    <div class="body2">
+        <div class="container4">
+            <div class="h">
+                <h1 class="s">SIGN UP</h1>
+            </div>
+            <div class="t">
+                <input class="tupe r1" type="text" placeholder="email address" id="email">
+                <input class="tupe r2" type="password" placeholder="password" id="password">
+            </div>
+            <div class="b"><button class="btn" onclick="signup()">sign up!</button></div>
+            <div class="j">
+                <h2 class="ti" id="t1"></h2>
+            </div>
+            <div class="k">
+                <h3 class="tt" id="t2"></h3>
+            </div>
+        </div>
+
+        <div class="log">
+            <div class="lh">
+                <h1 class="s">LOG IN</h1>
+            </div>
+            <div class="i">
+                <input class="lo" type="text" id="adress" placeholder="email address"><br>
+                <input class="lo" type="password" id="pass" placeholder="password">
+            </div>
+
+            <div class="b">
+                <button class="lg" onclick="login()">log in!</button>
+            </div>
+
+            <div class="x">
+                <h4 id="x"></h4>
+            </div>
+            <div class="z">
+                <h5 id="z"></h5>
+            </div>
+        </div>
+    </div>
 
     <footer>
         <div class="footerContainer">
@@ -86,14 +110,15 @@
                 <a href=""><i class="fa-brands fa-youtube"></i></a>
             </div>
             <div class="footerNav">
-                <ul><li><a href="">Home</a></li>
+                <ul>
+                    <li><a href="">Home</a></li>
                     <li><a href="">News</a></li>
                     <li><a href="">About</a></li>
                     <li><a href="">Contact Us</a></li>
                     <li><a href="">our Team</a></li>
                 </ul>
             </div>
-    
+
         </div>
         <div class="footerBottom">
             <p>Copyright &copy;2024; Designed by <span class="designer">Uzair</span></p>

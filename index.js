@@ -60,7 +60,7 @@ document.getElementById('root').innerHTML = categories.map((item) => {
         <div class='bottom'>
         <p>${title}</p>
         <h2>${price}.00</h2>` +
-        "<button onclick='addtocart(" + (i++) + ")'>Add to cart</button>" +
+        "<button class='b1' onclick='addtocart(" + (i++) + ")'>Add to cart</button>" +
         `</div>
         </div>`
     )
@@ -158,44 +158,59 @@ function moveSidebar() {
 
 // forms
 
+const users = {}; // Object to store users and passwords
 
+function signup() {
+   const user = document.getElementById("email").value;
+   const password = document.getElementById("password").value;
 
-document.addEventListener("DOMContentLoaded", function() {
-    const signInForm = document.getElementById("signInForm");
-    const signOutBtn = document.getElementById("signOutBtn");
-  
-    signInForm.addEventListener("submit", function(event) {
-      event.preventDefault();
-      const username = signInForm.username.value;
-      const password = signInForm.password.value;
-  
-      // Perform authentication (for simplicity, using hardcoded credentials)
-      if (username === "user" && password === "password") {
-        // Successful sign-in
-        alert("Sign in successful!");
-        signIn();
-      } else {
-        // Failed sign-in
-        alert("Incorrect username or password. Please try again.");
-      }
-    });
-  
-    signOutBtn.addEventListener("click", function() {
-      signOut();
-    });
-  
-    // Function to show sign-out button and hide sign-in form
-    function signIn() {
-      signInForm.style.display = "none";
-      signOutBtn.style.display = "block";
-    }
-  
-    // Function to show sign-in form and hide sign-out button
-    function signOut() {
-      signInForm.style.display = "block";
-      signOutBtn.style.display = "none";
-    }
-  });
+   if (!user || !password) {
+      document.getElementById("t1").innerHTML = "Fill all the blanks first!";
+      return;
+   }
+
+   if (users[user]) {
+      document.getElementById("t1").innerHTML = `${user} is already signed up! try another email.`;
+      return;
+   }
+
+   // Store username and hashed password
+   users[user] = { password: hash(password)};
+
+   console.log(`NAME: Mr.${user}`);
+   document.getElementById("t2").innerHTML = `Sign Up Successful Dear ${user}! THANKS FOR PARTICIPATION.`;
+
+   // Clear messages after showing the result
+   setTimeout(() => {
+      document.getElementById("t1").innerHTML = "";
+      document.getElementById("t2").innerHTML = "";
+   }, 10000); // Clear messages after 3 seconds (adjust as needed)
+}
+function hash(password) {
+   return password;
+}
+
+function login() {
+   const user = document.getElementById("adress").value;
+   const password = document.getElementById("pass").value;
+
+   if (!user || !password) {
+      document.getElementById("x").innerHTML = "fill all the blanks first!";
+      return;
+   }
+   if (!users[user] || users[user].password !== hash(password)) {
+      document.getElementById("x").innerHTML = `you are not signed up! please sign up first.`;
+      return;
+   }
+
+   console.log(`log in successful DEAR: ${user}!`);
+   document.getElementById("z").innerHTML = `you are loged in. WELCOME!`;
+
+   setTimeout(() => {
+      document.getElementById("x").innerHTML = "";
+      document.getElementById("z").innerHTML = "";
+   }, 10000); // Clear messages after 3 seconds (adjust as needed)
+}
   
   document.addEventListener("DOMContentLoaded", function() {
     const sidebar = document.getElementById("sidebar");
@@ -219,3 +234,6 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   });
   
+// scroll
+
+
