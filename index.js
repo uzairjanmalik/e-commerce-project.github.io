@@ -46,6 +46,12 @@ const product = [
         image:'images/w-4.jpg',
         title:'Rado',
         price:360,
+    },
+    {
+        id:8,
+        image:'images/i-phone.jpg',
+        title:'iphone 12 pro max',
+        price: 1099,
     }
 ];
 const categories = [...new Set(product.map((item) => { return item }))]
@@ -235,5 +241,27 @@ function login() {
   });
   
 // scroll
+
+document.addEventListener('DOMContentLoaded', function() {
+    var toggleSidebar = document.querySelector('.toggle-sidebar');
+    var sidebar = document.querySelector('.sidebar');
+    
+    toggleSidebar.addEventListener('click', function() {
+        sidebar.classList.toggle('hide-sidebar');
+    });
+
+    window.addEventListener('scroll', function() {
+        var scrollPercentage = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+        if (scrollPercentage >= 70) {
+            sidebar.classList.add('hide-sidebar');
+        } else {
+            sidebar.classList.remove('hide-sidebar');
+        }
+    });
+});
+
+
+
+
 
 
