@@ -1,0 +1,516 @@
+@import url('https://fonts.googleapis.com/css2?family=Moon+Dance&display=swap');
+
+a {
+    padding: 0px 6px;
+    color: white;
+    font-size: 25px;
+    text-decoration: none;
+    font-family: "Moon Dance", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: 'poppins', sans-serif; */
+    /* font-size: 18px; */
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    background-color: rgb(180, 3, 3);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.header .logo {
+    font-size: 35px;
+    font-weight: bold;
+    color: white;
+    font-family: "Moon Dance", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.li {
+    /* border: 2px solid red; */
+}
+
+/* picture */
+.picture {
+    margin-top: 75px;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("./images/cc-5.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: contain;
+    object-position: center;
+    /* filter: contrast(39px); */
+    /* filter: saturate(-7); */
+    position: relative;
+}
+
+h6 {
+    z-index: 3;
+    color: rgb(246, 5, 5);
+    font-size: 60px;
+    text-shadow: 4px 8px 9px rgb(13, 13, 13);
+    font-family: "Moon Dance", cursive;
+    font-weight: 900;
+    font-style: normal;
+    text-align: center;
+}
+
+/* forms */
+
+.container4 {
+    position: relative;
+    /* bottom: 5%; */
+    height: 450px;
+    width: auto;
+    border: 2px solid rgb(180, 3, 3);
+    margin: auto;
+    margin-top: 2%;
+    background-color: transparent;
+    border-radius: 8px;
+    box-shadow: 1px 1px 9px 1px black;
+}
+
+.h {
+    height: 40px;
+    width: 100%;
+    /* border: 2px solid red; */
+}
+
+h1 {
+    font-family: "Moon Dance", cursive;
+    font-weight: 800;
+    font-style: normal;
+    padding-left: 5px;
+    color: rgb(180, 3, 3);
+    text-shadow: 2px 2px 4px black;
+}
+
+.t {
+    height: 109px;
+    width: 100%;
+    /* border: 2px solid red; */
+    margin-top: 40px;
+    justify-content: center;
+    text-align: center;
+}
+
+.tupe {
+    margin: auto;
+    margin-top: 5px;
+    background-color: transparent;
+    /* display: block; */
+    padding: 15px;
+    width: 85%;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px 1px black;
+}
+
+::placeholder {
+    color: rgb(180, 3, 3);
+}
+
+.b {
+    height: 5%;
+    width: 30%;
+    /* border: 2px solid red; */
+    margin: auto;
+    margin-top: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    padding: 9px 20px;
+    font-size: 20px;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 1px 1px 5px 1px black;
+    background-color: transparent;
+    color: rgb(180, 3, 3);
+    transition: background-color 3s, color 5s;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.btn:hover {
+    color: rgb(252, 249, 249);
+    background-color: rgb(20, 3, 253);
+}
+
+.j {
+    height: 43px;
+    width: 98%;
+    /* border: 2px solid red; */
+    margin: auto;
+    margin-top: 1px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 10px;
+    transition: color 3s;
+}
+
+h2 {
+    font-family: cursive;
+    transition: color 3s;
+}
+
+h2:hover {
+    color: red;
+}
+
+h3 {
+    font-family: cursive;
+    transition: color 3s;
+}
+
+h3:hover {
+    color: blue;
+}
+
+.k {
+    height: 70px;
+    width: 98%;
+    /* border: 2px solid red; */
+    margin: auto;
+    margin-top: 2px;
+    padding-top: 2px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 15px;
+}
+
+.ti {
+    color: rgb(180, 3, 3);
+}
+
+.tt {
+    color: rgb(180, 3, 3);
+}
+
+@media (max-width:300px) {
+    .picture {
+        height: 100vh;
+        margin-top: 35px;
+    }
+
+    .h6 {
+        font-size: 20px;
+    }
+
+    .container4 {
+        margin-top: 15vh;
+        width: 90vw;
+    }
+    .log{
+        border: 2px solid green;
+        
+    }
+}
+
+@media (min-width:301px) and (max-width:500px) {
+    .container4 {
+        height: 420px;
+        margin-top: 18vh;
+        width: 85vw;
+    }
+}
+
+@media (min-width:501px) and (max-width:700px) {
+    .container4 {
+        height: 420px;
+        margin-top: 18vh;
+        width: 65vw;
+    }
+}
+
+@media (min-width:701px) and (max-width:1000px) {
+    .container4 {
+        height: 420px;
+        margin-top: 18vh;
+        width: 55vw;
+    }
+}
+
+@media (min-width:1001px) and (max-width:1408px) {
+    .container4 {
+        height: 420px;
+        margin-top: 18vh;
+        width: 35vw;
+    }
+}
+
+.log {
+    position: relative;
+    /* right: 8%; */
+    height: 450px;
+    width: 35%;
+    border: 2px solid rgb(255, 4, 4);
+    margin: auto;
+    margin-top: 3%;
+    background-color: transparent;
+    border-radius: 8px;
+    box-shadow: 1px 1px 5px 2px black;
+}
+
+.lh {
+    height: 40px;
+    width: 100%;
+    /* border: 2px solid red;   */
+}
+
+.i {
+    height: 120px;
+    width: 98%;
+    /* border: 2px solid red; */
+    margin: auto;
+    margin-top: 30px;
+    justify-content: center;
+    text-align: center;
+}
+
+.lo {
+    margin-top: 5px;
+    width: 85%;
+    padding: 17px 23px;
+    border: none;
+    background-color: transparent;
+    border-radius: 7px;
+    box-shadow: 1px 1px 9px 2px black;
+}
+
+
+.b {
+    height: 90px;
+    width: 40%;
+    /* border: 2px solid red; */
+    position: relative;
+    bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lg {
+    padding: 19px 25px;
+    font-size: 20px;
+    font-weight: bolder;
+    border: none;
+    border-radius: 5px;
+    color: hwb(0 0% 4%);
+    background-color: transparent;
+    box-shadow: 1px 1px 5px 1px black;
+    transition: background-color 3s, color 4s;
+    cursor: pointer;
+}
+
+.lg:hover {
+    background-color: blue;
+    color: white;
+}
+
+
+.x {
+    color: red;
+    height: 40px;
+    width: 95%;
+    /* border: 2px solid red; */
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 18px;
+}
+
+.z {
+    color: red;
+    height: 40px;
+    width: 95%;
+    /* border: 2px solid red; */
+    margin: auto;
+    margin-top: 2px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 25px;
+}
+
+h4 {
+    font-family: cursive;
+    transition: color 3s;
+}
+
+h4:hover {
+    color: red;
+}
+
+h5 {
+    font-family: cursive;
+    transition: color 3s;
+}
+
+h5:hover {
+    color: blue;
+}
+
+/* footer */
+
+footer {
+    background-color: rgb(180, 3, 3);
+    margin-top: 6%;
+}
+
+.footerContainer {
+    width: 100vw;
+    /* margin-top: 15px; */
+    padding: 70px 30px 20px;
+}
+
+.socialIcons {
+    display: flex;
+    justify-content: center;
+}
+
+.socialIcons a {
+    text-decoration: none;
+    padding: 10px;
+    background-color: rgb(180, 3, 3);
+    margin: 10px;
+    border-radius: 50%;
+}
+
+.socialIcons a i {
+    font-size: 1.5em;
+    color: rgb(54, 1, 1);
+    opacity: 0, 9;
+}
+
+/* Hover affect on social media icon */
+.socialIcons a:hover {
+    background-color: rgb(47, 1, 1);
+    transition: 0.5s;
+}
+
+.socialIcons a:hover i {
+    color: rgb(251, 16, 8);
+    transition: 0.5s;
+}
+
+.footerNav {
+    margin: 30px 0;
+}
+
+.footerNav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.footerNav ul li a {
+    color: rgb(243, 105, 105);
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.7em;
+    opacity: 0.7;
+    transition: 0.5s;
+    font-family: "Moon Dance", cursive;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.footerNav ul li a:hover {
+    opacity: 1;
+}
+
+.footerBottom {
+    background-color: #690303;
+    padding: 20px;
+    text-align: center;
+}
+
+.footerBottom p {
+    color: rgb(250, 9, 9);
+}
+
+.designer {
+    opacity: 0.9;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+    font-family: "Moon Dance", cursive;
+    font-weight: 900;
+    font-style: normal;
+}
+
+@media (max-width:700px) {
+    h1 {
+        text-align: center;
+    }
+
+    h6 {
+        font-size: 30px;
+    }
+
+    .picture {
+        background-size: cover;
+    }
+
+    #root {
+        grid-template-columns: repeat(1, 1fr);
+        width: 100vw;
+    }
+
+    .sidebar {
+        width: 90%;
+        /* background-color: transparent; */
+    }
+
+    /* footer */
+    .footer {
+        margin-top: 95%;
+    }
+
+    .footerNav ul {
+        flex-direction: column;
+    }
+
+    .footerNav ul li {
+        width: 100%;
+        text-align: center;
+        margin: 10px;
+    }
+
+    .socialIcons a {
+        padding: 8px;
+        margin: 4px;
+    }
+}
