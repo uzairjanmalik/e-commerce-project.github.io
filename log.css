@@ -82,142 +82,125 @@ h6 {
 }
 
 /* forms */
-
-.container4 {
+.log {
     position: relative;
-    /* bottom: 5%; */
+    /* right: 8%; */
     height: 450px;
-    width: auto;
+    width: 35%;
     border: 2px solid silver;
     margin: auto;
-    margin-top: 2%;
+    margin-top: 3%;
     background-color: transparent;
     border-radius: 8px;
-    box-shadow: 1px 1px 9px 1px black;
+    box-shadow: 1px 1px 5px 2px black;
 }
 
-.h {
+.lh {
+    font-family: "Moon Dance", cursive;
+    font-weight: 400;
+    font-style: normal;
     height: 40px;
     width: 100%;
-    /* border: 2px solid red; */
+    /* border: 2px solid red;   */
 }
 
-h1 {
-    font-family: "Moon Dance", cursive;
-    font-weight: 800;
-    font-style: normal;
-    padding-left: 5px;
-    color: rgb(99, 99, 99);
-    text-shadow: 2px 2px 4px black;
-}
-
-.t {
-    height: 109px;
-    width: 100%;
+.i {
+    height: 120px;
+    width: 98%;
     /* border: 2px solid red; */
-    margin-top: 40px;
+    margin: auto;
+    margin-top: 30px;
     justify-content: center;
     text-align: center;
 }
 
-.tupe {
-    margin: auto;
+.lo {
     margin-top: 5px;
-    background-color: transparent;
-    /* display: block; */
-    padding: 15px;
     width: 85%;
+    padding: 17px 23px;
     border: none;
-    border-radius: 5px;
-    box-shadow: 1px 1px 10px 1px black;
+    background-color: transparent;
+    border-radius: 7px;
+    box-shadow: 1px 1px 9px 2px black;
 }
 
-::placeholder {
-    color: rgb(99, 99, 99);
-}
 
 .b {
-    height: 5%;
-    width: 30%;
+    height: 90px;
+    width: 40%;
     /* border: 2px solid red; */
-    margin: auto;
-    margin-top: 22px;
+    position: relative;
+    bottom: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: auto;   
 }
 
-.btn {
-    padding: 9px 20px;
+.lg {
+    padding: 19px 25px;
     font-size: 20px;
-    border: none;
-    border-radius: 3px;
-    box-shadow: 1px 1px 5px 1px black;
-    background-color: transparent;
-    color: rgb(99, 99, 99);
-    transition: background-color 3s, color 5s;
     font-weight: bolder;
+    border: none;
+    border-radius: 5px;
+    color: rgb(99, 99, 99);
+    background-color: transparent;
+    box-shadow: 1px 1px 5px 1px black;
+    transition: background-color 3s, color 4s;
     cursor: pointer;
 }
 
-.btn:hover {
-    color: rgb(252, 249, 249);
-    background-color: rgb(20, 3, 253);
+.lg:hover {
+    background-color: blue;
+    color: white;
 }
 
-.j {
-    height: 43px;
-    width: 98%;
+
+.x {
+    color: rgb(99, 99, 99);
+    height: 40px;
+    width: 95%;
     /* border: 2px solid red; */
     margin: auto;
-    margin-top: 1px;
     display: flex;
     justify-content: center;
     text-align: center;
-    font-size: 10px;
-    transition: color 3s;
+    font-size: 18px;
 }
 
-h2 {
-    font-family: cursive;
-    transition: color 3s;
-}
-
-h2:hover {
-    color: red;
-}
-
-h3 {
-    font-family: cursive;
-    transition: color 3s;
-}
-
-h3:hover {
-    color: blue;
-}
-
-.k {
-    height: 70px;
-    width: 98%;
+.z {
+    color: rgb(99, 99, 99);
+    height: 40px;
+    width: 95%;
     /* border: 2px solid red; */
     margin: auto;
     margin-top: 2px;
-    padding-top: 2px;
     display: flex;
     justify-content: center;
     text-align: center;
-    font-size: 15px;
+    font-size: 25px;
 }
 
-.ti {
-    color: rgb(99, 99, 99);
+h4 {
+    font-family: cursive;
+    transition: color 3s;
 }
 
-.tt {
-    color: rgb(99, 99, 99);
+h4:hover {
+    color: red;
+}
+
+h5 {
+    font-family: cursive;
+    transition: color 3s;
+}
+
+h5:hover {
+    color: blue;
 }
 
 /* footer */
+
 footer {
     background-color: silver;
     margin-top: 6%;
@@ -364,14 +347,15 @@ footer {
         font-size: 25px;
         color: rgb(252, 3, 3);
     }
-
-    .container4 {
-        margin-top: 10vh;
+    .log{
         width: 90vw;
     }
 }
 
 @media (min-width:301px) and (max-width:500px) {
+    .log{
+        width: 85vw;
+    }
     h6{
         width: 90vw;
         color: rgb(248, 3, 3);
@@ -380,19 +364,13 @@ footer {
     .picture{
         margin-top: 15%;
     }
-    .container4 {
-        height: 420px;
-        margin-top: 10vh;
-        width: 85vw;
-    }
 }
 
 @media (min-width:501px) and (max-width:700px) {
     .picture{
         background-size: contain;
     }
-    .container4 {
-        height: 420px;
+    .log{
         width: 65vw;
     }
     h6{
@@ -402,15 +380,14 @@ footer {
 }
 
 @media (min-width:701px) and (max-width:1000px) {
-    .container4 {
-        height: 420px;
+    .log{
         width: 55vw;
     }
+    
 }
 
 @media (min-width:1001px) and (max-width:1408px) {
-    .container4 {
-        height: 420px;
+    .log{
         width: 50vw;
     }
     h6{

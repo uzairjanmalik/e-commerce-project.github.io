@@ -24,33 +24,33 @@ const product = [
         price: 100,
     },
     {
-        id:4,
-        image:'images/cc-5.jpg',
-        title:'luxury watch',
-        price:300,
+        id: 4,
+        image: 'images/cc-5.jpg',
+        title: 'luxury watch',
+        price: 300,
     },
     {
-        id:5,
-        image:'images/w-1.jpg',
-        title:'modern style',
-        price:200,
+        id: 5,
+        image: 'images/w-1.jpg',
+        title: 'modern style',
+        price: 200,
     },
     {
-        id:6,
-        image:'images/w-3.jpg',
-        title:'rolex',
-        price:700,
+        id: 6,
+        image: 'images/w-3.jpg',
+        title: 'rolex',
+        price: 700,
     },
     {
-        id:7,
-        image:'images/w-4.jpg',
-        title:'Rado',
-        price:360,
+        id: 7,
+        image: 'images/w-4.jpg',
+        title: 'Rado',
+        price: 360,
     },
     {
-        id:8,
-        image:'images/i-phone.jpg',
-        title:'iphone 12 pro max',
+        id: 8,
+        image: 'images/i-phone.jpg',
+        title: 'iphone 12 pro max',
         price: 1099,
     }
 ];
@@ -103,7 +103,7 @@ function displaycart() {
                     <p style='font-size:12px;'>${title}</p>
                     <h2 style='font-size:15px;'>${price}.00</h2>
                     <i class='fa-solid fa-trash' onclick='delElement(${j++})'></i>
-                </div>`
+                     </div>`
             );
         }).join('');
     }
@@ -138,63 +138,63 @@ function moveSidebar() {
     var screenWidth = window.innerWidth;
     var sidebarWidth = sidebar.offsetWidth;
     var newPosition = Math.floor(Math.random() * (screenWidth - sidebarWidth));
-  
+
     sidebar.style.right = newPosition + "px";
-  }
-  
-  // Function to check screen width and move the sidebar if necessary
-  function checkWidthAndMoveSidebar() {
+}
+
+// Function to check screen width and move the sidebar if necessary
+function checkWidthAndMoveSidebar() {
     var screenWidth = window.innerWidth;
     var sidebar = document.getElementById("sidebar");
-  
+
     if (screenWidth < 300) {
-      moveSidebar();
+        moveSidebar();
     } else {
-      sidebar.style.right = "0px"; // Reset position if screen is wider than 300px
+        sidebar.style.right = "0px"; // Reset position if screen is wider than 300px
     }
-  }
-  
-  // Call the function initially and on window resize
-  window.onload = checkWidthAndMoveSidebar;
-  window.onresize = checkWidthAndMoveSidebar;
-  
-  // Periodically move the sidebar randomly
-  setInterval(moveSidebar, 3000);
-  
-  
-  document.addEventListener("DOMContentLoaded", function() {
+}
+
+// Call the function initially and on window resize
+window.onload = checkWidthAndMoveSidebar;
+window.onresize = checkWidthAndMoveSidebar;
+
+// Periodically move the sidebar randomly
+setInterval(moveSidebar, 3000);
+
+
+document.addEventListener("DOMContentLoaded", function () {
     const sidebar = document.getElementById("sidebar");
-    
+
     // Check screen width on page load
     checkScreenWidth();
-  
+
     // Check screen width when window is resized
     window.addEventListener("resize", checkScreenWidth);
-  
+
     function checkScreenWidth() {
-      const screenWidth = window.innerWidth;
-      
-      // If screen width is less than or equal to 300px, activate sidebar
-      if (screenWidth <= 300) {
-        sidebar.classList.add("active");
-      } else {
-        // If screen width is greater than 300px, deactivate sidebar
-        sidebar.classList.remove("active");
-      }
+        const screenWidth = window.innerWidth;
+
+        // If screen width is less than or equal to 300px, activate sidebar
+        if (screenWidth <= 300) {
+            sidebar.classList.add("active");
+        } else {
+            // If screen width is greater than 300px, deactivate sidebar
+            sidebar.classList.remove("active");
+        }
     }
-  });
-  
+});
+
 // scroll
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     var toggleSidebar = document.querySelector('.toggle-sidebar');
     var sidebar = document.querySelector('.sidebar');
-    
-    toggleSidebar.addEventListener('click', function() {
+
+    toggleSidebar.addEventListener('click', function () {
         sidebar.classList.toggle('hide-sidebar');
     });
 
-    window.addEventListener('scroll', function() {
+    window.addEventListener('scroll', function () {
         var scrollPercentage = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
         if (scrollPercentage >= 10 && scrollPercentage <= 84) {
             sidebar.classList.remove('hide-sidebar');
