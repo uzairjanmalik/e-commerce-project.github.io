@@ -2,7 +2,8 @@
 
 a {
     padding: 0px 6px;
-    color: white;
+    color: transparent;
+    text-shadow: 2px 1px 1px rgb(13, 13, 13);
     font-size: 25px;
     text-decoration: none;
     font-family: "Moon Dance", cursive;
@@ -23,6 +24,7 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    /* background: rgb(236, 233, 233); */
 }
 
 .header {
@@ -30,7 +32,7 @@ body {
     top: 0;
     z-index: 1000;
     width: 100%;
-    background-color: rgb(180, 3, 3);
+    background-color: silver;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -40,7 +42,8 @@ body {
 .header .logo {
     font-size: 35px;
     font-weight: bold;
-    color: white;
+    color: transparent;
+    text-shadow:  1px 1px rgb(13, 13, 13);
     font-family: "Moon Dance", cursive;
     font-weight: 400;
     font-style: normal;
@@ -58,10 +61,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url("./images/cc-5.jpg");
+    background-image: url("./images/w-4.jpg");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     object-fit: contain;
     object-position: center;
     /* filter: contrast(39px); */
@@ -71,9 +74,9 @@ body {
 
 h6 {
     z-index: 3;
-    color: rgb(246, 5, 5);
+    color: transparent;
     font-size: 60px;
-    text-shadow: 4px 8px 9px rgb(13, 13, 13);
+    text-shadow: 2px 1px 1px rgb(13, 13, 13);
     font-family: "Moon Dance", cursive;
     font-weight: 900;
     font-style: normal;
@@ -87,7 +90,7 @@ h6 {
     /* bottom: 5%; */
     height: 450px;
     width: auto;
-    border: 2px solid rgb(180, 3, 3);
+    border: 2px solid silver;
     margin: auto;
     margin-top: 2%;
     background-color: transparent;
@@ -106,7 +109,7 @@ h1 {
     font-weight: 800;
     font-style: normal;
     padding-left: 5px;
-    color: rgb(180, 3, 3);
+    color: rgb(99, 99, 99);
     text-shadow: 2px 2px 4px black;
 }
 
@@ -132,7 +135,7 @@ h1 {
 }
 
 ::placeholder {
-    color: rgb(180, 3, 3);
+    color: rgb(99, 99, 99);
 }
 
 .b {
@@ -153,7 +156,7 @@ h1 {
     border-radius: 3px;
     box-shadow: 1px 1px 5px 1px black;
     background-color: transparent;
-    color: rgb(180, 3, 3);
+    color: rgb(99, 99, 99);
     transition: background-color 3s, color 5s;
     font-weight: bolder;
     cursor: pointer;
@@ -209,71 +212,20 @@ h3:hover {
 }
 
 .ti {
-    color: rgb(180, 3, 3);
+    color: rgb(99, 99, 99);
 }
 
 .tt {
-    color: rgb(180, 3, 3);
+    color: rgb(99, 99, 99);
 }
 
-@media (max-width:300px) {
-    .picture {
-        height: 100vh;
-        margin-top: 35px;
-    }
-
-    .h6 {
-        font-size: 20px;
-    }
-
-    .container4 {
-        margin-top: 15vh;
-        width: 90vw;
-    }
-    .log{
-        border: 2px solid green;
-        
-    }
-}
-
-@media (min-width:301px) and (max-width:500px) {
-    .container4 {
-        height: 420px;
-        margin-top: 18vh;
-        width: 85vw;
-    }
-}
-
-@media (min-width:501px) and (max-width:700px) {
-    .container4 {
-        height: 420px;
-        margin-top: 18vh;
-        width: 65vw;
-    }
-}
-
-@media (min-width:701px) and (max-width:1000px) {
-    .container4 {
-        height: 420px;
-        margin-top: 18vh;
-        width: 55vw;
-    }
-}
-
-@media (min-width:1001px) and (max-width:1408px) {
-    .container4 {
-        height: 420px;
-        margin-top: 18vh;
-        width: 35vw;
-    }
-}
 
 .log {
     position: relative;
     /* right: 8%; */
     height: 450px;
     width: 35%;
-    border: 2px solid rgb(255, 4, 4);
+    border: 2px solid silver;
     margin: auto;
     margin-top: 3%;
     background-color: transparent;
@@ -325,7 +277,7 @@ h3:hover {
     font-weight: bolder;
     border: none;
     border-radius: 5px;
-    color: hwb(0 0% 4%);
+    color: rgb(99, 99, 99);
     background-color: transparent;
     box-shadow: 1px 1px 5px 1px black;
     transition: background-color 3s, color 4s;
@@ -339,7 +291,7 @@ h3:hover {
 
 
 .x {
-    color: red;
+    color: rgb(99, 99, 99);
     height: 40px;
     width: 95%;
     /* border: 2px solid red; */
@@ -351,7 +303,7 @@ h3:hover {
 }
 
 .z {
-    color: red;
+    color: rgb(99, 99, 99);
     height: 40px;
     width: 95%;
     /* border: 2px solid red; */
@@ -384,7 +336,7 @@ h5:hover {
 /* footer */
 
 footer {
-    background-color: rgb(180, 3, 3);
+    background-color: silver;
     margin-top: 6%;
 }
 
@@ -402,25 +354,25 @@ footer {
 .socialIcons a {
     text-decoration: none;
     padding: 10px;
-    background-color: rgb(180, 3, 3);
+    background-color: rgb(218, 215, 215);
     margin: 10px;
     border-radius: 50%;
 }
 
 .socialIcons a i {
     font-size: 1.5em;
-    color: rgb(54, 1, 1);
+    color: rgb(99, 99, 99);
     opacity: 0, 9;
 }
 
 /* Hover affect on social media icon */
 .socialIcons a:hover {
-    background-color: rgb(47, 1, 1);
+    background-color: rgb(99, 99, 99);
     transition: 0.5s;
 }
 
 .socialIcons a:hover i {
-    color: rgb(251, 16, 8);
+    color: silver;
     transition: 0.5s;
 }
 
@@ -435,7 +387,7 @@ footer {
 }
 
 .footerNav ul li a {
-    color: rgb(243, 105, 105);
+    color: rgb(99, 99, 99);
     margin: 20px;
     text-decoration: none;
     font-size: 1.7em;
@@ -451,13 +403,13 @@ footer {
 }
 
 .footerBottom {
-    background-color: #690303;
+    background-color: rgb(99, 99, 99);
     padding: 20px;
     text-align: center;
 }
 
 .footerBottom p {
-    color: rgb(250, 9, 9);
+    color: rgb(196, 193, 193);
 }
 
 .designer {
@@ -491,7 +443,6 @@ footer {
 
     .sidebar {
         width: 90%;
-        /* background-color: transparent; */
     }
 
     /* footer */
@@ -512,5 +463,90 @@ footer {
     .socialIcons a {
         padding: 8px;
         margin: 4px;
+    }
+}
+
+@media (max-width:300px) {
+    a{
+        position: relative;
+        right: 0;
+        padding: 0px 1px;
+    }
+    .picture {
+        height: 100vh;
+        margin-top: 25%;
+    }
+
+    h6 {
+        font-size: 25px;
+        color: rgb(252, 3, 3);
+    }
+
+    .container4 {
+        margin-top: 10vh;
+        width: 90vw;
+    }
+    .log{
+        width: 90vw;
+    }
+}
+
+@media (min-width:301px) and (max-width:500px) {
+    .log{
+        width: 85vw;
+    }
+    h6{
+        width: 90vw;
+        color: rgb(248, 3, 3);
+        font-size: 70px;
+    }
+    .picture{
+        margin-top: 15%;
+    }
+    .container4 {
+        height: 420px;
+        margin-top: 10vh;
+        width: 85vw;
+    }
+}
+
+@media (min-width:501px) and (max-width:700px) {
+    .picture{
+        background-size: contain;
+    }
+    .log{
+        width: 65vw;
+    }
+    .container4 {
+        height: 420px;
+        width: 65vw;
+    }
+    h6{
+        color: rgb(248, 3, 3);
+        font-size: 50px;
+    }
+}
+
+@media (min-width:701px) and (max-width:1000px) {
+    .container4 {
+        height: 420px;
+        width: 55vw;
+    }
+    .log{
+        width: 55vw;
+    }
+    
+}
+
+@media (min-width:1001px) and (max-width:1408px) {
+    .container4 {
+        height: 420px;
+        width: 50vw;
+    }
+    .log{
+        width: 50vw;
+    }
+    h6{
+        font-size: 90px;
     }
 }
