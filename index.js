@@ -52,6 +52,24 @@ const product = [
         image: 'images/i-phone.jpg',
         title: 'iphone 12 pro max',
         price: 1099,
+    },
+    {
+        id: 9,
+        image: 'images/pc.jpg',
+        title: 'iphone pc ultra processor',
+        price: 2099,
+    },
+    {
+        id: 10,
+        image: 'images/lp.jpg',
+        title: 'laptop lifebook',
+        price: 1069,
+    },
+    {
+        id: 11,
+        image: 'images/ip.jpg',
+        title: 'iphone with ultra watch',
+        price: 3099,
     }
 ];
 const categories = [...new Set(product.map((item) => { return item }))]
@@ -196,7 +214,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     window.addEventListener('scroll', function () {
         var scrollPercentage = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-        if (scrollPercentage >= 10 && scrollPercentage <= 84) {
+        if (scrollPercentage >= 10 && scrollPercentage <= 90) {
             sidebar.classList.remove('hide-sidebar');
         } else {
             sidebar.classList.add('hide-sidebar');

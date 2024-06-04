@@ -427,7 +427,9 @@ footer {
     .sidebar {
         width: 45%
     }
-
+    #root{
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (min-width:999px) and (max-width:1408px) {
