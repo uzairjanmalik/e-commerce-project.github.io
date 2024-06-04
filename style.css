@@ -4,7 +4,7 @@ a{
     color: rgb(248, 245, 245);
     font-size: 25px;
     text-decoration: none;
-   
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .fa-solid .fa-house{
     color: white;
@@ -134,7 +134,7 @@ h6 {
     position: fixed;
     top: 80px;
     right: 10px;
-    width: 200px;
+    width: 400px;
     /* height: 200px; */
     border: 2px solid rgb(245, 164, 3);
     border-radius: 5px;
@@ -180,6 +180,7 @@ h6 {
     margin: 20px 0px;
     padding: 10px 0px;
     border-top: 1px solid #333;
+    /* border-top: 1px solid #eb0e0e; */
 }
 
 .box {
@@ -293,7 +294,7 @@ footer {
 .socialIcons a {
     text-decoration: none;
     padding: 9px;
-    background-color: rgb(19, 13, 0);
+    /* background-color: rgb(19, 13, 0); */
     margin: 10px;
     border-radius: 50%;
 }
@@ -306,12 +307,12 @@ footer {
 
 /* Hover affect on social media icon */
 .socialIcons a:hover {
-    background-color: rgb(32, 23, 1);
+    /* background-color: rgb(32, 23, 1); */
     transition: 0.5s;
 }
 
 .socialIcons a:hover i {
-    color: rgb(63, 42, 1);
+    color: rgb(36, 25, 1);
     transition: 0.5s;
 }
 
@@ -361,10 +362,21 @@ footer {
     font-weight: 900;
     font-style: normal;
 }
+@media (min-width:300px) and (max-width:405px) {
+    .head{
+        height: 79px;
+        /* width: 100%; */
+    }
+    .click{
+        margin-top: 2px;
+        display: block;
+        position: relative;
+        left: 10px;
+    }
+}
 @media (min-width:300px) and (max-width:388px) {
-    .sidebar{
-        position: fixed;
-        top: 23%;
+    .head{
+        padding: 20px 0px;
     }
 }
 @media (max-width:700px) {
@@ -420,7 +432,7 @@ footer {
 
 @media (min-width:999px) and (max-width:1408px) {
     .sidebar {
-        width: 29%
+        width: 39%
     }
 
 }
