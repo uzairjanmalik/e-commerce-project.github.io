@@ -185,11 +185,12 @@ footer {
   padding: 10px;
   background-color: rgb(44, 44, 44);
   margin: 10px;
+  font-size: 1.1em;
   border-radius: 50%;
 }
 
 .socialIcons a i {
-  font-size: 1.5em;
+  font-size: 1.9em;
   color: rgb(245, 243, 243);
   opacity: 0, 9;
 }

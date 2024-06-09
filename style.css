@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Moon+Dance&display=swap');
-
+html{
+    scroll-behavior: smooth;
+}
 a {
     padding: 0px 6px;
     color: rgb(248, 245, 245);
@@ -21,6 +23,7 @@ a {
 }
 
 body {
+    /* object-fit: center; */
     display: flex;
     align-items: center;
     justify-content: center;
